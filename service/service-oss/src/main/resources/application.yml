@@ -1,0 +1,24 @@
+server:
+  port: 8304
+spring:
+  application:
+    name: service-oss
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+mybatis-plus:
+  mapper-locations: classpath:com/lhz/serviceoss/mapper/xml/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-beijing.aliyuncs.com
+      keyid: LTAI4G71k9KU8mqGAPqzpxok
+      keysecret: g89Mk3kdFpOV0jiaKdU3ZlsZQmIM3q
+      bucketName: lhz-oss
